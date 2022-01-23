@@ -4,6 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/circular_image_view.xml" value="0.2898148148148148" />
+        <entry key="app/src/main/res/drawable/ic_edit_pencil_svgrepo_com.xml" value="0.18385416666666668" />
+        <entry key="app/src/main/res/drawable/ic_edit_svgrepo_com.xml" value="0.2898148148148148" />
+        <entry key="app/src/main/res/drawable/ic_pencil_edit_svgrepo_com.xml" value="0.18385416666666668" />
+        <entry key="app/src/main/res/drawable/ic_pencil_svgrepo_com.xml" value="0.2898148148148148" />
         <entry key="app/src/main/res/drawable/ic_search_svgrepo_com.xml" value="0.2898148148148148" />
         <entry key="app/src/main/res/drawable/search_bar_drawable.xml" value="0.2898148148148148" />
         <entry key="app/src/main/res/drawable/top_radius_drawable.xml" value="0.2898148148148148" />
