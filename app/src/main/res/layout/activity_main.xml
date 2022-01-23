@@ -202,7 +202,8 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="170dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@id/bottom_bar"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             android:background="#E0E0E0"
@@ -268,6 +269,56 @@
                 app:layout_constraintLeft_toRightOf="@id/profile_pic_with_edit"
                 app:layout_constraintBottom_toBottomOf="@id/profile_pic_with_edit"
                 android:text="Let's update some profile info that may have changed"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/bottom_bar"
+            android:layout_marginHorizontal="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            >
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:id="@+id/home"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:src="@drawable/ic_home_svgrepo_com"
+                app:tint="#1877F2"
+                />
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:id="@+id/friends"
+                app:layout_constraintLeft_toRightOf="@id/home"
+                app:layout_constraintRight_toLeftOf="@id/profile_nav"
+                android:src="@drawable/ic_user_friends_svgrepo_com"
+                />
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:id="@+id/profile_nav"
+app:layout_constraintLeft_toRightOf="@id/friends"
+                app:layout_constraintRight_toLeftOf="@id/notifications"
+                android:src="@drawable/ic_profile_user_svgrepo_com"
+                />
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:id="@+id/notifications"
+                app:layout_constraintLeft_toRightOf="@id/profile_nav"
+                app:layout_constraintRight_toLeftOf="@id/more_nav"
+                android:src="@drawable/ic_notifications_svgrepo_com"
+                />
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:id="@+id/more_nav"
+                app:layout_constraintRight_toRightOf="parent"
+                android:src="@drawable/ic_actions_more_2_desktop_jld6gct_svgrepo_com"
                 />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
