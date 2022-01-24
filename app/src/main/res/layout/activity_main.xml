@@ -4,292 +4,279 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    >
+
+    <ImageView
+        android:id="@+id/back_button"
+        android:layout_width="24dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/ic_back_svgrepo_com"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/search_bar"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/search_bar_drawable"
+        android:drawableLeft="@drawable/ic_search_svgrepo_com"
+        android:padding="18dp"
+        android:text="sdsd"
+        android:textColorHint="@color/white"
+        android:textSize="10sp"
+        app:layout_constraintLeft_toRightOf="@id/back_button"
+        app:layout_constraintRight_toLeftOf="@id/profile"
+        app:layout_constraintTop_toTopOf="@id/back_button" />
+
+    <ImageView
+        android:id="@+id/profile"
+        android:layout_width="24dp"
+        android:layout_height="30dp"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/ic_profile_user_svgrepo_com"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/back_button" />
+
+    <ImageView
+        android:id="@+id/cover"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/sky"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search_bar" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+
+        android:layout_margin="6dp"
+        app:cardBackgroundColor="#f0f0f0"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="@id/cover"
+        app:layout_constraintRight_toRightOf="@id/cover">
+
         <ImageView
-            android:layout_marginTop="12dp"
-            android:layout_width="24dp"
+            android:layout_width="30dp"
             android:layout_height="30dp"
-            android:id="@+id/back_button"
-            android:src="@drawable/ic_back_svgrepo_com"
-            android:layout_marginLeft="8dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent" />
+            android:layout_gravity="center"
+            android:src="@drawable/ic_photo_svgrepo_com" />
+    </androidx.cardview.widget.CardView>
 
-        <EditText
-            android:layout_marginLeft="8dp"
-            android:layout_width="0dp"
-            android:layout_height="30dp"
-            android:id="@+id/search_bar"
-            app:layout_constraintTop_toTopOf="@id/back_button"
-            app:layout_constraintLeft_toRightOf="@id/back_button"
-            app:layout_constraintRight_toLeftOf="@id/profile"
-            android:layout_marginRight="8dp"
-            android:drawableLeft="@drawable/ic_search_svgrepo_com"
-            android:padding="18dp"
-            android:text="sdsd"
-            android:textSize="10sp"
-            android:textColorHint="@color/white"
-            android:background="@drawable/search_bar_drawable" />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/profile_pic"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        app:cardBackgroundColor="@color/black"
+        app:cardCornerRadius="50pt"
+        app:layout_constraintCircle="@id/cover"
+        app:layout_constraintCircleAngle="180"
+        app:layout_constraintCircleRadius="85dp"
+        tools:ignore="missingConstraints">
 
         <ImageView
-            android:layout_width="24dp"
-            android:layout_height="30dp"
-            android:id="@+id/profile"
-            android:layout_marginRight="8dp"
-            android:src="@drawable/ic_profile_user_svgrepo_com"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@id/back_button"/>
-
-        <ImageView
-            android:layout_marginTop="16dp"
-            android:layout_width="match_parent"
-            android:layout_height="170dp"
-            app:layout_constraintTop_toBottomOf="@id/search_bar"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            android:id="@+id/cover"
-            android:src="@drawable/sky"
-            android:scaleType="centerCrop" />
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-
-            app:layout_constraintRight_toRightOf="@id/cover"
-            app:layout_constraintBottom_toBottomOf="@id/cover"
-            android:layout_margin="6dp"
-            app:cardCornerRadius="8dp"
-            app:cardBackgroundColor="#f0f0f0">
-
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_gravity="center"
-                android:src="@drawable/ic_photo_svgrepo_com" />
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
             android:layout_width="140dp"
             android:layout_height="140dp"
-            app:cardBackgroundColor="@color/black"
-            android:id="@+id/profile_pic"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="@id/cover"
-            app:layout_constraintVertical_bias=".18"
-            app:cardCornerRadius="50pt">
+            android:src="@drawable/index" />
+    </androidx.cardview.widget.CardView>
 
-            <ImageView
-                android:layout_width="140dp"
-                android:layout_height="140dp"
-                android:src="@drawable/index" />
-        </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:cardCornerRadius="50pt"
+        app:layout_constraintBottom_toBottomOf="@id/profile_pic"
+        app:layout_constraintHorizontal_bias=".95"
+        app:layout_constraintLeft_toLeftOf="@id/profile_pic"
+        app:layout_constraintRight_toRightOf="@id/profile_pic">
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            app:cardCornerRadius="50pt"
-            app:layout_constraintBottom_toBottomOf="@id/profile_pic"
-            app:layout_constraintRight_toRightOf="@id/profile_pic"
-            app:layout_constraintLeft_toLeftOf="@id/profile_pic"
-            app:layout_constraintHorizontal_bias=".95"
-            >
-            <ImageView
-                android:layout_width="250dp"
-                android:layout_height="25dp"
-                android:src="@drawable/ic_photo_svgrepo_com"
-                android:layout_gravity="center"
-                />
-        </androidx.cardview.widget.CardView>
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_photo_svgrepo_com" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Leigh Grammer"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/profile_pic" />
+
+    <View
+        android:id="@+id/add_story_container"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginHorizontal="18dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/add_story_drawable"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/more"
+        app:layout_constraintTop_toBottomOf="@id/name" />
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/ic_photo_svgrepo_com"
+        app:layout_constraintBottom_toBottomOf="@id/add_story_container"
+        app:layout_constraintRight_toLeftOf="@id/add_story"
+        app:layout_constraintTop_toTopOf="@id/add_story_container"
+        app:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/add_story"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Story"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/add_story_container"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/add_story_container" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/more"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="8dp"
+        app:cardBackgroundColor="#F0F0F0"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/add_story_container">
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/profile_pic"
-            android:layout_marginTop="12dp"
-            android:textSize="28sp"
-            android:text="Leigh Grammer"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:text="..."
             android:textAlignment="center"
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            android:id="@+id/name"
-            />
+            android:textSize="26sp"
+            android:textStyle="bold" />
 
-        <View
-            android:layout_width="0dp"
-            android:layout_height="40dp"
-            android:id="@+id/add_story_container"
-            app:layout_constraintTop_toBottomOf="@id/name"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toLeftOf="@id/more"
-            android:background="@drawable/add_story_drawable"
-            android:layout_marginHorizontal="18dp"
-            android:layout_marginTop="12dp"
-            />
+    </androidx.cardview.widget.CardView>
 
-            <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:src="@drawable/ic_photo_svgrepo_com"
-                app:layout_constraintRight_toLeftOf="@id/add_story"
-                app:layout_constraintTop_toTopOf="@id/add_story_container"
-                app:layout_constraintBottom_toBottomOf="@id/add_story_container"
-                app:tint="@color/white"
-                android:layout_marginRight="8dp"
-                />
+    <View
+        android:id="@+id/back"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="#E0E0E0"
+        app:layout_constraintBottom_toTopOf="@id/home" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/add_story"
-                android:text="Add Story"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                android:textColor="#fff"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                app:layout_constraintTop_toTopOf="@id/add_story_container"
-                app:layout_constraintBottom_toBottomOf="@id/add_story_container"
-                />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/profile_pic_with_edit"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="18dp"
+        app:cardCornerRadius="50pt"
+        app:layout_constraintBottom_toTopOf="@id/home"
+        app:layout_constraintLeft_toLeftOf="parent">
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="60dp"
-            android:layout_height="40dp"
-            android:id="@+id/more"
-            app:cardBackgroundColor="#F0F0F0"
-            app:cardCornerRadius="10dp"
-            android:layout_marginRight="8dp"
-            app:layout_constraintTop_toTopOf="@id/add_story_container"
-            app:layout_constraintRight_toRightOf="parent"
-            >
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="..."
-                android:layout_gravity="center"
-                android:textStyle="bold"
-                android:textSize="26sp"
-                android:textAlignment="center"
-                />
-
-        </androidx.cardview.widget.CardView>
-
-        <View
+        <ImageView
             android:layout_width="match_parent"
-            android:layout_height="160dp"
-            android:background="#E0E0E0"
-            android:id="@+id/back"
-            app:layout_constraintBottom_toTopOf="@id/home"
-            />
+            android:layout_height="match_parent"
+            android:src="@drawable/index" />
+    </androidx.cardview.widget.CardView>
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                app:layout_constraintBottom_toTopOf="@id/home"
-                android:layout_marginLeft="8dp"
-                android:layout_marginBottom="18dp"
-                android:id="@+id/profile_pic_with_edit"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:cardCornerRadius="50pt"
-                >
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/index"
-                />
-            </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/edit_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:cardCornerRadius="50pt"
+        app:layout_constraintBottom_toBottomOf="@id/profile_pic_with_edit"
+        app:layout_constraintHorizontal_bias=".18"
+        app:layout_constraintLeft_toLeftOf="@id/profile_pic_with_edit"
+        app:layout_constraintRight_toRightOf="parent">
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:id="@+id/edit_icon"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintLeft_toLeftOf="@id/profile_pic_with_edit"
-                app:layout_constraintBottom_toBottomOf="@id/profile_pic_with_edit"
-                app:layout_constraintHorizontal_bias=".18"
-                app:cardCornerRadius="50pt"
-                >
+        <ImageView
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_edit_pencil_svgrepo_com" />
 
-                <ImageView
-                    android:layout_width="27dp"
-                    android:layout_height="27dp"
-                    android:src="@drawable/ic_edit_pencil_svgrepo_com"
-                    android:layout_gravity="center"
-                    />
+    </androidx.cardview.widget.CardView>
 
-            </androidx.cardview.widget.CardView>
+    <TextView
+        android:id="@+id/whats_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:text="What's new, Leigh?"
+        android:textColor="@color/black"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/profile_pic_with_edit"
+        app:layout_constraintTop_toTopOf="@id/profile_pic_with_edit" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="What's new, Leigh?"
-                android:layout_marginLeft="12dp"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:textSize="21sp"
-                android:id="@+id/whats_up"
-                app:layout_constraintTop_toTopOf="@id/profile_pic_with_edit"
-                app:layout_constraintLeft_toRightOf="@id/profile_pic_with_edit"
-                />
+    <TextView
+        android:id="@+id/lets_update"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:text="Let's update some profile info that may have changed"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/profile_pic_with_edit"
+        app:layout_constraintLeft_toRightOf="@id/profile_pic_with_edit" />
 
-            <TextView
-                android:layout_width="280dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/lets_update"
-                android:layout_marginLeft="12dp"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                app:layout_constraintLeft_toRightOf="@id/profile_pic_with_edit"
-                app:layout_constraintBottom_toBottomOf="@id/profile_pic_with_edit"
-                android:text="Let's update some profile info that may have changed"
-                />
+    <ImageView
+        android:id="@+id/home"
+        android:layout_width="40dp"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="8dp"
+        android:src="@drawable/ic_home_svgrepo_com"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:tint="#1877F2" />
 
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="60dp"
-                android:layout_marginHorizontal="8dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:id="@+id/home"
-                app:layout_constraintLeft_toLeftOf="parent"
-                android:src="@drawable/ic_home_svgrepo_com"
-                app:tint="#1877F2"
-                />
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="60dp"
-                android:id="@+id/friends"
-                app:layout_constraintTop_toTopOf="@id/home"
-                app:layout_constraintLeft_toRightOf="@id/home"
-                app:layout_constraintRight_toLeftOf="@id/profile_nav"
-                android:src="@drawable/ic_user_friends_svgrepo_com"
-                />
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="60dp"
-                android:id="@+id/profile_nav"
-app:layout_constraintLeft_toRightOf="@id/friends"
-                app:layout_constraintTop_toTopOf="@id/home"
-                app:layout_constraintRight_toLeftOf="@id/notifications"
-                android:src="@drawable/ic_profile_user_svgrepo_com"
-                />
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="60dp"
-                android:id="@+id/notifications"
-                app:layout_constraintTop_toTopOf="@id/home"
-                app:layout_constraintLeft_toRightOf="@id/profile_nav"
-                app:layout_constraintRight_toLeftOf="@id/more_nav"
-                android:src="@drawable/ic_notifications_svgrepo_com"
-                />
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="60dp"
-                android:id="@+id/more_nav"
-                app:layout_constraintTop_toTopOf="@id/home"
-                app:layout_constraintRight_toRightOf="parent"
-                android:src="@drawable/ic_actions_more_2_desktop_jld6gct_svgrepo_com"
-                />
+    <ImageView
+        android:id="@+id/friends"
+        android:layout_width="40dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_user_friends_svgrepo_com"
+        app:layout_constraintLeft_toRightOf="@id/home"
+        app:layout_constraintRight_toLeftOf="@id/profile_nav"
+        app:layout_constraintTop_toTopOf="@id/home" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/profile_nav"
+        android:layout_width="40dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_profile_user_svgrepo_com"
+        app:layout_constraintLeft_toRightOf="@id/friends"
+        app:layout_constraintRight_toLeftOf="@id/notifications"
+        app:layout_constraintTop_toTopOf="@id/home" />
+
+    <ImageView
+        android:id="@+id/notifications"
+        android:layout_width="40dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_notifications_svgrepo_com"
+        app:layout_constraintLeft_toRightOf="@id/profile_nav"
+        app:layout_constraintRight_toLeftOf="@id/more_nav"
+        app:layout_constraintTop_toTopOf="@id/home" />
+
+    <ImageView
+        android:id="@+id/more_nav"
+        android:layout_width="40dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_actions_more_2_desktop_jld6gct_svgrepo_com"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/home" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
