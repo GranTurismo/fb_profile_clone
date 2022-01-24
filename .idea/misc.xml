@@ -5,6 +5,9 @@
       <map>
         <entry key="app/src/main/res/drawable/add_story_drawable.xml" value="0.2898148148148148" />
         <entry key="app/src/main/res/drawable/circular_image_view.xml" value="0.2898148148148148" />
+        <entry key="app/src/main/res/drawable/circular_imageview_background_drawable.xml" value="0.28425925925925927" />
+        <entry key="app/src/main/res/drawable/cover_imageview_background_drawable.xml" value="0.28425925925925927" />
+        <entry key="app/src/main/res/drawable/half_rounded_imageview_background_drawable.xml" value="0.28425925925925927" />
         <entry key="app/src/main/res/drawable/ic_edit_pencil_svgrepo_com.xml" value="0.18385416666666668" />
         <entry key="app/src/main/res/drawable/ic_edit_svgrepo_com.xml" value="0.2898148148148148" />
         <entry key="app/src/main/res/drawable/ic_pencil_edit_svgrepo_com.xml" value="0.18385416666666668" />
