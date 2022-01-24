@@ -49,7 +49,9 @@
         android:src="@drawable/sky"
         app:layout_constraintLeft_toLeftOf="@id/guideline"
         app:layout_constraintRight_toRightOf="@id/guideline2"
-        app:layout_constraintTop_toBottomOf="@id/search_bar" />
+        app:layout_constraintTop_toBottomOf="@id/search_bar">
+
+    </ImageView>
 
     <ImageView
         android:layout_width="40dp"
