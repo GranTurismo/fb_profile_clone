@@ -149,26 +149,20 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="@id/add_story_container" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/more"
-        android:layout_width="60dp"
-        android:layout_height="40dp"
-        android:layout_marginRight="8dp"
-        app:cardBackgroundColor="#F0F0F0"
-        app:cardCornerRadius="10dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@id/add_story_container">
-
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
             android:layout_gravity="center"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/textview_background_drawable"
             android:text="..."
             android:textAlignment="center"
             android:textSize="26sp"
+            android:id="@+id/more"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/add_story_container"
             android:textStyle="bold" />
 
-    </androidx.cardview.widget.CardView>
 
     <View
         android:id="@+id/back"
