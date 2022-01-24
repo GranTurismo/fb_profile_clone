@@ -10,7 +10,7 @@
     <ImageView
         android:id="@+id/back_button"
         android:layout_width="24dp"
-        android:layout_height="30dp"
+        android:layout_height="48dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="12dp"
         android:src="@drawable/ic_back_svgrepo_com"
@@ -20,13 +20,13 @@
     <EditText
         android:id="@+id/search_bar"
         android:layout_width="0dp"
-        android:layout_height="30dp"
+        android:layout_height="48dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:background="@drawable/search_bar_drawable"
         android:drawableLeft="@drawable/ic_search_svgrepo_com"
         android:padding="18dp"
-        android:text="sdsd"
+        android:text=""
         android:textColorHint="@color/white"
         android:textSize="10sp"
         app:layout_constraintLeft_toRightOf="@id/back_button"
@@ -36,7 +36,7 @@
     <ImageView
         android:id="@+id/profile"
         android:layout_width="24dp"
-        android:layout_height="30dp"
+        android:layout_height="48dp"
         android:layout_marginRight="8dp"
         android:src="@drawable/ic_profile_user_svgrepo_com"
         app:layout_constraintRight_toRightOf="parent"
